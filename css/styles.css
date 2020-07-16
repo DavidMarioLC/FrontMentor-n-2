@@ -26,7 +26,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: var(--veryDarkBlue);
-    background-image: url('/images/bg-mobile.png');
+    background-image: url(/images/bg-mobile.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -185,7 +185,7 @@ background-color: rgb(255, 255, 255);
 
 @media screen and (min-width:1440px){
     .container{
-        background-image: url('/images/bg-desktop.png');
+        background-image: url(/images/bg-desktop.png);
         background-size:contain;
         background-position: bottom;
     }
