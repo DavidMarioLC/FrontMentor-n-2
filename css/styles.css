@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryGradient:hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --paleBlue:hsl(243, 100%, 93%);
+    --grayBlue:hsl(229, 7%, 55%);
+    --darkBlue:hsl(228, 56%, 26%);
+    --darkBlueAccent:hsl(229,55%, 20%);
+    --veryDarkBlue:hsl(229, 57%, 11%);
+}
+body{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--veryDarkBlue);
+    background-image: url('/images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24em;
+    height: 25em;
+    
+}
+
+.cardLogo{
+    width: 100%;
+    border-radius: .8em 7em .8em .8em;
+    background-color: var(--darkBlue);
+    margin-bottom: 1em;
+}
+
+.wrapper{
+    padding: 2.5em;
+   
+}
+
+.cardLogo__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardLogo__img{
+    display: block;
+    padding-bottom: 2.2em;
+    
+}
+
+.cardLogo__icons{
+    width: 100%;
+    display: flex;
+    
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem; 
+    background-color: var(--veryDarkBlue);
+    font-size: 0.9em;
+    text-align: center;
+    padding: .8em;
+    border-radius: .7em;
+    margin-right: 1em;
+    
+}
+
+.cardBar{
+    width: 100%;
+    background-color: var(--darkBlue);
+    border-radius: .8em;
+    position: relative;
+}
+
+.cardBar__text{
+    color: var(--paleBlue);
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0 .2em;
+
+}
+
+.progress{
+    width: 100%;
+    height: 1.3em;
+    background-color: var(--darkBlueAccent);
+    border-radius: 1em;
+    padding: .2em;
+    
+}
+.progress__content{
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    border-radius: 1em;
+    padding: .12em;
+    display: flex;
+    justify-content: end;
+}
+.point{
+    width:10px;
+    height:100%;
+    border-radius: 50%;
+    background-color: var(--paleBlue);
+}
+
+
+.cardBar__feature{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 0;
+}
+
+.cardBar__feature-text{
+    font-weight: 700;
+    color: var(--paleBlue);
+    letter-spacing: 1px;
+}
+
+.cardBar__float{
+display: flex;
+justify-content: space-around;
+align-items: center;
+position: absolute;
+left: 50%;
+bottom: 10;
+padding: .8em 1em;
+border-radius: .8em;
+transform: translate(-50%, -50%);
+background-color: rgb(255, 255, 255);
+}
+
+.cardBar__float p{
+    font-size: .9em;
+    font-weight: 700;
+    color: var(--grayBlue);
+    letter-spacing: 1px;
+}
+
+.cardBar__float strong{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+    margin-right: .2em;
+}
+
+.attribution{
+    position: absolute;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    bottom: 0;     
+    text-align: center;
+    color: #fff;
+}
+
+.attribution a{
+    color: hsl(60, 100%, 65%);
+}
+
+@media screen and (min-width:1440px){
+    .container{
+        background-image: url('/images/bg-desktop.png');
+        background-size:contain;
+        background-position: bottom;
+    }
+
+    .items{
+        flex-direction:row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 25em;
+        
+    }
+    .cardLogo{
+        width: 15%;
+        margin:0;
+    }
+    .cardBar{
+        width: 30%;
+        margin-left: 2em;
+        margin-top: 3em;
+    }
+
+    .cardBar__text{
+        text-align: left;
+    }
+
+    .cardBar__float{
+        left: 75%;
+        right: -10%;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+    .cardBar__float::after{
+        position: absolute;
+        content: "";
+        height: 0px;
+        width: 0px;
+        bottom: -15px;
+        right: 0;
+        border-top:25px solid #fff;
+        border-left: 40px solid transparent;
+        border-right: 0px solid #fff;
+        border-bottom: 0px solid transparent; 
+        /* outline: 1px solid red; */
+        
+    }
+  
+}
